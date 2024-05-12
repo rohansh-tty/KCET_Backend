@@ -1,49 +1,65 @@
 import json 
 import frappe 
+import os
 
-
-def add_college():
-    with open('/workspace/development/frappe-bench/apps/cutoff_app/cutoff_app/cutoff_app/data/college.json') as f:
-        college = json.load(f)
-        college_list = college['data']
-        for college in college_list:
-            print(college)
-            college_exists = frappe.db.exists('College', college['code'])
-            if len(college['college_name'])>0 and not college_exists:
-                print(f'inserting {college} ')
-                new_college_doc = frappe.new_doc('College')
-                new_college_doc.college_name =  college['college_name']
-                new_college_doc.college_code = college['code']
-                new_college_doc.location = college['location']
-                new_college_doc.insert()
-                new_college_doc.save()
-                frappe.db.commit()
-                print(f'inserted {college["college_name"]} to db')
-                
-
-def add_cutoff():
-    with open('/workspace/development/frappe-bench/apps/cutoff_app/cutoff_app/cutoff_app/data/cutoff.json') as f:
-        cutoff = json.load(f)
-        cutoff_list = cutoff['data']
-        for cutoff_info in cutoff_list:
-            cutoff_doc_exists = frappe.db.exists({"doctype": "Cutoff", "college_code": cutoff_info['College Code'], "branch": cutoff_info['Branch'].strip().split(' ')[0], "category": cutoff_info['Category'], "year": cutoff_info['Year'], "cutoff": cutoff_info['Cutoff'], "round": cutoff_info['Round']})
-            college_doc_exists = frappe.db.exists({"doctype": "College", "college_code": cutoff_info['College Code']})
-            if not cutoff_info['Cutoff']  == "--":
-                if not cutoff_doc_exists and college_doc_exists:
-                    new_cutoff_doc = frappe.new_doc('Cutoff')
-                    new_cutoff_doc.college_code = cutoff_info['College Code']
-                    new_cutoff_doc.branch = cutoff_info['Branch'].strip().split(' ')[0]
-                    new_cutoff_doc.category = cutoff_info['Category']
-                    new_cutoff_doc.year = cutoff_info['Year']
-                    new_cutoff_doc.cutoff = cutoff_info['Cutoff']
-                    new_cutoff_doc.round = cutoff_info['Round']
-                    new_cutoff_doc.insert()
-                    new_cutoff_doc.save()
+def add_college(college_json_path):
+    if os.path.exists(college_json_path):
+        with open(college_json_path) as f:
+            college = json.load(f)
+            college_list = college['data']
+            for college in college_list:
+                print(college)
+                college_exists = frappe.db.exists('College', college['code'])
+                if len(college['college_name'])>0 and not college_exists:
+                    print(f'inserting {college} ')
+                    new_college_doc = frappe.new_doc('College')
+                    new_college_doc.college_name =  college['college_name']
+                    new_college_doc.college_code = college['code']
+                    new_college_doc.location = college['location']
+                    new_college_doc.insert()
+                    new_college_doc.save()
                     frappe.db.commit()
-                    print(f'inserted {cutoff_info["Branch"].strip().split(" ")[0]} of {cutoff_info["College Code"]} with {cutoff_info["Cutoff"]} to cutoff db')
-                elif not college_doc_exists:
-                    print(f'College with code {cutoff_info["College Code"]} does not exist in College db')
-                    
+                    print(f'inserted {college["college_name"]} to db')
+    else:
+        print(f'file {college_json_path} does not exist')        
+        
+def convert_to_int(value):
+    try:
+        return int(value)
+    except:
+        return 0   
+
+def add_cutoff(cutoff_json_path):
+    if os.path.exists(cutoff_json_path):
+        with open(cutoff_json_path) as f:
+            cutoff = json.load(f)
+            cutoff_list = cutoff['data']
+            for cutoff_info in cutoff_list:
+                try:
+                    cutoff_doc_exists = frappe.db.exists({"doctype": "Cutoff", "college_code": cutoff_info['College Code'], "branch": cutoff_info['Branch'].strip().split(' ')[0], "category": cutoff_info['Category'], "year": cutoff_info['Year'], "cutoff": cutoff_info['Cutoff'], "round": cutoff_info['Round']})
+                    college_doc_exists = frappe.db.exists({"doctype": "College", "college_code": cutoff_info['College Code']})
+                    if not cutoff_info['Cutoff']  == "--" and convert_to_int(cutoff_info['Cutoff']):
+                        if not cutoff_doc_exists and college_doc_exists:
+                            college_doc = frappe.get_doc('College', cutoff_info['College Code'])
+                            new_cutoff_doc = frappe.new_doc('Cutoff')
+                            new_cutoff_doc.college_code = cutoff_info['College Code']
+                            new_cutoff_doc.branch = cutoff_info['Branch'].strip().split(' ')[0]
+                            new_cutoff_doc.category = cutoff_info['Category']
+                            new_cutoff_doc.year = cutoff_info['Year']
+                            new_cutoff_doc.cutoff = cutoff_info['Cutoff']
+                            new_cutoff_doc.round = cutoff_info['Round']
+                            new_cutoff_doc.college_name = college_doc.college_name
+                            new_cutoff_doc.insert()
+                            new_cutoff_doc.save()
+                            frappe.db.commit()
+                            print(f'inserted {cutoff_info["Branch"].strip().split(" ")[0]} of {cutoff_info["College Code"]} with {cutoff_info["Cutoff"]} to cutoff db')
+                        elif not college_doc_exists:
+                            print(f'College with code {cutoff_info["College Code"]} does not exist in College db')
+                except Exception as e:
+                    print(f'failed to insert {cutoff_info["Branch"].strip().split(" ")[0]} of {cutoff_info["College Code"]} with {cutoff_info["Cutoff"]} to cutoff db due to {e}')
+    else:
+        print(f'file {cutoff_json_path} does not exist')      
+                  
 caste_category_columns = ['1G',
  '1K',
  '1R',
@@ -68,6 +84,7 @@ caste_category_columns = ['1G',
  'STG',
  'STK',
  'STR']                 
+
 def add_category():
     for category in caste_category_columns:
         category_doc_exists = frappe.db.exists({"doctype": "Category", "category_name": category})
@@ -82,23 +99,26 @@ def add_category():
             print(f'{category} already exists in category db')
         
         
-def add_branch():
-    with open('/workspace/development/frappe-bench/apps/cutoff_app/cutoff_app/cutoff_app/data/cutoff.json') as f:
-        cutoff = json.load(f)
-        cutoff_list = cutoff['data']
-        for cutoff_info in cutoff_list:
-            branch_doc_exists = frappe.db.exists({"doctype": "Branch", "branch_short_name": cutoff_info['Branch'].strip().split(' ')[0]})
-            
-            if not branch_doc_exists:
-                    new_branch_doc = frappe.new_doc('Branch')
-                    new_branch_doc.branch_name = ' '.join(cutoff_info['Branch'].strip().split(' ')[1:])
-                    new_branch_doc.branch_short_name = cutoff_info['Branch'].strip().split(' ')[0]
-                    new_branch_doc.insert()
-                    new_branch_doc.save()
-                    frappe.db.commit()
-                    print(f'inserted {cutoff_info["Branch"].strip().split(" ")[0]} of {cutoff_info["College Code"]} with {cutoff_info["Cutoff"]} to cutoff db')
-            else:
-                print(f'{cutoff_info["Branch"].strip().split(" ")[0]} already exists in branch db')
+def add_branch(cutoff_json_path):
+    if os.path.exists(cutoff_json_path):
+        with open(cutoff_json_path) as f:
+            cutoff = json.load(f)
+            cutoff_list = cutoff['data']
+            for cutoff_info in cutoff_list:
+                branch_doc_exists = frappe.db.exists({"doctype": "Branch", "branch_short_name": cutoff_info['Branch'].strip().split(' ')[0]})
+                
+                if not branch_doc_exists:
+                        new_branch_doc = frappe.new_doc('Branch')
+                        new_branch_doc.branch_name = ' '.join(cutoff_info['Branch'].strip().split(' ')[1:])
+                        new_branch_doc.branch_short_name = cutoff_info['Branch'].strip().split(' ')[0]
+                        new_branch_doc.insert()
+                        new_branch_doc.save()
+                        frappe.db.commit()
+                        print(f'inserted {cutoff_info["Branch"].strip().split(" ")[0]} of {cutoff_info["College Code"]} with {cutoff_info["Cutoff"]} to cutoff db')
+                else:
+                    print(f'{cutoff_info["Branch"].strip().split(" ")[0]} already exists in branch db')
+    else:
+        print(f'file {cutoff_json_path} does not exist')
                 
 def add_college_name_in_cutoff():
     cutoff_list = frappe.db.get_all("Cutoff")
