@@ -1,0 +1,824 @@
+{
+    "data": [
+        {
+            "college_name": "",
+            "location": "",
+            "code": ""
+        },
+        {
+            "college_name": "",
+            "location": "Bangalore",
+            "code": "E002"
+        },
+        {
+            "college_name": "B M S College of Engineering Basavanagudi",
+            "location": "Bangalore",
+            "code": "E003"
+        },
+        {
+            "college_name": " Ambedkar Institute Of Technology",
+            "location": "Bangalore",
+            "code": "E004"
+        },
+        {
+            "college_name": "Bangalore Institute of Technology",
+            "location": "Bangalore",
+            "code": "E008"
+        },
+        {
+            "college_name": "P E S University (Ring Road Campus)",
+            "location": "Bangalore",
+            "code": "E009"
+        },
+        {
+            "college_name": "M V J College of Engineering",
+            "location": "Bangalore",
+            "code": "E011"
+        },
+        {
+            "college_name": "Ghousia Engineering College",
+            "location": "Ramanagara",
+            "code": "E013"
+        },
+        {
+            "college_name": "S J C Institute of Technology",
+            "location": "Chickballapur",
+            "code": "E014"
+        },
+        {
+            "college_name": "Thimmaiah Institute of Technology BANGARAPET -TQ kolar",
+            "location": "District",
+            "code": "E015"
+        },
+        {
+            "college_name": "Siddaganga Institute of Technology",
+            "location": "Tumkur",
+            "code": "E016"
+        },
+        {
+            "college_name": "Sri Siddartha Institute of Technology",
+            "location": "Tumkur",
+            "code": "E017"
+        },
+        {
+            "college_name": "Kalpatharu Institute of Technology",
+            "location": "Tiptur",
+            "code": "E018"
+        },
+        {
+            "college_name": "The National Institute of Engineering(SOUTH CAMPUS)",
+            "location": "Mysore",
+            "code": "E022"
+        },
+        {
+            "college_name": "P E S College of Engineering ",
+            "location": "Mandya",
+            "code": "E023"
+        },
+        {
+            "college_name": "Tontadarya College of Engineering",
+            "location": "Gadag",
+            "code": "E028"
+        },
+        {
+            "college_name": "KLE Technological University(Formerly BVBCET)",
+            "location": "Hubli",
+            "code": "E030"
+        },
+        {
+            "college_name": "Basaveshwara Engineering College",
+            "location": "Bagalkot",
+            "code": "E031"
+        },
+        {
+            "college_name": "E Socity`s Rural Engineering College",
+            "location": "Hulkoti",
+            "code": "E032"
+        },
+        {
+            "college_name": " ",
+            "location": "Ranebennur",
+            "code": "E033"
+        },
+        {
+            "college_name": "Sri Dharmasthala Manjunatheswara College of Engineering",
+            "location": "Dharwad",
+            "code": "E034"
+        },
+        {
+            "college_name": "Anjuman Engineering College Bhatkala",
+            "location": " Uttar kannada Dist",
+            "code": "E035"
+        },
+        {
+            "college_name": ")",
+            "location": "Belgaum",
+            "code": "E036"
+        },
+        {
+            "college_name": " Gogte Institute of Technology",
+            "location": "Belgaum",
+            "code": "E037"
+        },
+        {
+            "college_name": "Hira Sugar Institute of Technology",
+            "location": "Belagavi",
+            "code": "E040"
+        },
+        {
+            "college_name": "P D A College of Engineering",
+            "location": "Gulbarga",
+            "code": "E041"
+        },
+        {
+            "college_name": "Khaja Banda Nawaz University",
+            "location": "Kalburgi",
+            "code": "E042"
+        },
+        {
+            "college_name": "Gurunanak Dev Engineering College",
+            "location": "Bidar",
+            "code": "E043"
+        },
+        {
+            "college_name": "Mahabaleswarappa Engineering College",
+            "location": "Bellari",
+            "code": "E045"
+        },
+        {
+            "college_name": "H K Es S L N College of Engineering",
+            "location": "Raichur",
+            "code": "E046"
+        },
+        {
+            "college_name": "Malnad College of Engineering ",
+            "location": "Hassan",
+            "code": "E047"
+        },
+        {
+            "college_name": "K V G College of Engineering Sullia",
+            "location": "D.K District",
+            "code": "E049"
+        },
+        {
+            "college_name": "P A College of Engineering Bantwal",
+            "location": " Mangalore",
+            "code": "E054"
+        },
+        {
+            "college_name": "JSS Science and Technology University(Formerly SJCE)",
+            "location": "Mysore",
+            "code": "E055"
+        },
+        {
+            "college_name": " college of Engineering ",
+            "location": "Davangere",
+            "code": "E057"
+        },
+        {
+            "college_name": "Bapuji Institute of Engineering and Technology",
+            "location": "Davangere",
+            "code": "E058"
+        },
+        {
+            "college_name": "Sri Jagadguru Murugharajendra University (Formerly SJMIT)",
+            "location": "Chitradurga",
+            "code": "E059"
+        },
+        {
+            "college_name": "Adhichunchanagiri Institute of Technology",
+            "location": "Chickmagalur",
+            "code": "E061"
+        },
+        {
+            "college_name": "Jawaharlal Nehru National College of Engineering",
+            "location": "Shimoga",
+            "code": "E062"
+        },
+        {
+            "college_name": "Bahubali College of Engineering",
+            "location": "Hassan",
+            "code": "E063"
+        },
+        {
+            "college_name": "Vidya Vardhaka College of Engineering",
+            "location": "Mysuru",
+            "code": "E064"
+        },
+        {
+            "college_name": "Ballari Institute of Technology and Management Near Allipur",
+            "location": "Bellary",
+            "code": "E065"
+        },
+        {
+            "college_name": "Vidya Vikas Institute of Engineering and Technology",
+            "location": "Mysuru",
+            "code": "E070"
+        },
+        {
+            "college_name": "The Oxford College of Engineering",
+            "location": "Bangalore",
+            "code": "E071"
+        },
+        {
+            "college_name": "Acharya Institute of Technology",
+            "location": "Bangalore",
+            "code": "E075"
+        },
+        {
+            "college_name": "H M S Institute of Technology ",
+            "location": "Tumkur",
+            "code": "E077"
+        },
+        {
+            "college_name": "Sri Revana Siddeswara Institute of Technology Bangalore",
+            "location": "North",
+            "code": "E078"
+        },
+        {
+            "college_name": "K S Institute of Technology",
+            "location": "Bangalore",
+            "code": "E079"
+        },
+        {
+            "college_name": "Vemana Institute of Technology",
+            "location": "Bangalore",
+            "code": "E081"
+        },
+        {
+            "college_name": "Basavakalyana Engineering College Basavakalyana",
+            "location": " Bidar-Dist",
+            "code": "E090"
+        },
+        {
+            "college_name": "Coorg Institute of Technology ",
+            "location": "Kodagu",
+            "code": "E091"
+        },
+        {
+            "college_name": "AMC Engineering College",
+            "location": "Bangalore",
+            "code": "E092"
+        },
+        {
+            "college_name": "East Point College of Engineering and Technology",
+            "location": "Bangalore",
+            "code": "E093"
+        },
+        {
+            "college_name": "C M R Institute of Technology",
+            "location": "Bangalore",
+            "code": "E094"
+        },
+        {
+            "college_name": "Atria Institute of Technology",
+            "location": "Bangalore",
+            "code": "E095"
+        },
+        {
+            "college_name": "K N S Institute of Technology",
+            "location": "Bangalore",
+            "code": "E096"
+        },
+        {
+            "college_name": "Channabasaveshwara Institute of Technology Gubbi",
+            "location": " Tumkur",
+            "code": "E097"
+        },
+        {
+            "college_name": "DONBOSCO Institute of Technology",
+            "location": "Bangalore",
+            "code": "E098"
+        },
+        {
+            "college_name": "Global Academy of Technology",
+            "location": "Bangalore",
+            "code": "E100"
+        },
+        {
+            "college_name": "Nitte Meenakshi Institutute of Technology ",
+            "location": "Bangalore",
+            "code": "E101"
+        },
+        {
+            "college_name": "East West Institute of Technology",
+            "location": "Bangalore",
+            "code": "E102"
+        },
+        {
+            "college_name": "B N M Institute of Technology",
+            "location": "Bangalore",
+            "code": "E103"
+        },
+        {
+            "college_name": "Sapthagiri College of Engineering",
+            "location": "Bangalore",
+            "code": "E105"
+        },
+        {
+            "college_name": "Sri Venkateshwara College of Engineering Bettahalsur(P)",
+            "location": " Bangalore",
+            "code": "E106"
+        },
+        {
+            "college_name": "Sri Krishna Institute of Technology",
+            "location": "Bangalore",
+            "code": "E107"
+        },
+        {
+            "college_name": "Sambhram Institute of Technology",
+            "location": "Bangalore",
+            "code": "E108"
+        },
+        {
+            "college_name": "G M Institute of Technology",
+            "location": "Davanagere",
+            "code": "E111"
+        },
+        {
+            "college_name": "S J B Institute of Technology Kengeri",
+            "location": "Bangalore",
+            "code": "E112"
+        },
+        {
+            "college_name": "Jalappa Institute of Technology Bangalore  Rural",
+            "location": "Dist",
+            "code": "E113"
+        },
+        {
+            "college_name": "RNS Institute of Technology",
+            "location": "Bangalore",
+            "code": "E114"
+        },
+        {
+            "college_name": "K C T Engineering College Roza(B)",
+            "location": "Gulbarga",
+            "code": "E115"
+        },
+        {
+            "college_name": "Jnanavikasa Institute of Technology",
+            "location": "Ramanagar-Dist",
+            "code": "E116"
+        },
+        {
+            "college_name": "Vivekananada College of Engineering Technology D K",
+            "location": "DIST",
+            "code": "E118"
+        },
+        {
+            "college_name": "Secab Institute of Engineering and Technology",
+            "location": "Bijapur",
+            "code": "E119"
+        },
+        {
+            "college_name": "G S S S Institute of Engineering and Technology for Women",
+            "location": "Mysore",
+            "code": "E120"
+        },
+        {
+            "college_name": "Smt. Kamala and Sri Venkappa M.Agadi College of Engg. and Tech. Laxmeshwara-Tq",
+            "location": " Gadag Dt.",
+            "code": "E121"
+        },
+        {
+            "college_name": "K L S Viswanathrao Deshpande Institute of Technology Haliyal",
+            "location": " Uttara Kannada -Dist",
+            "code": "E132"
+        },
+        {
+            "college_name": "Moodalakatte Institute of Technology",
+            "location": "Udupi",
+            "code": "E133"
+        },
+        {
+            "college_name": "Impact College of Engineering and Applied Sciences",
+            "location": "Bangalore",
+            "code": "E134"
+        },
+        {
+            "college_name": "P E S University (Electronic City Campus) ",
+            "location": "Bangalore",
+            "code": "E135"
+        },
+        {
+            "college_name": "Srinivas Institute of Technology",
+            "location": "Mangalore.",
+            "code": "E136"
+        },
+        {
+            "college_name": "Rajarajeswari College of Engineering Kumbalagodu",
+            "location": "Bangalore",
+            "code": "E139"
+        },
+        {
+            "college_name": "John Engineering College",
+            "location": "Bangalore",
+            "code": "E141"
+        },
+        {
+            "college_name": "Cambridge Institutute of Technology",
+            "location": "Bangalore",
+            "code": "E144"
+        },
+        {
+            "college_name": "P E S Institute of Technology and Management ",
+            "location": "Shivamogga",
+            "code": "E145"
+        },
+        {
+            "college_name": "Mangalore Institute of Technology and Engineering Mangalore Tq",
+            "location": "D.K",
+            "code": "E147"
+        },
+        {
+            "college_name": "S E A College of Engineering and Technology K R puram",
+            "location": "bangalore",
+            "code": "E149"
+        },
+        {
+            "college_name": "Government Engineering College",
+            "location": "Chamarajanagara",
+            "code": "E150"
+        },
+        {
+            "college_name": "Government Engineering College",
+            "location": "Hassan",
+            "code": "E151"
+        },
+        {
+            "college_name": "Government Engineering College K R Pet",
+            "location": " Mandya DT.",
+            "code": "E153"
+        },
+        {
+            "college_name": "Government Engineering College",
+            "location": "Ramanagara",
+            "code": "E154"
+        },
+        {
+            "college_name": "Maharaja Institute of Technology-Mysore Belawadi",
+            "location": "  Mandya Dist",
+            "code": "E155"
+        },
+        {
+            "college_name": " and Management ",
+            "location": "Mangalore",
+            "code": "E156"
+        },
+        {
+            "college_name": "Government Engineering College Kushalnagar",
+            "location": "Kodagu Dist",
+            "code": "E157"
+        },
+        {
+            "college_name": "Government Engineering College ",
+            "location": "Raichur",
+            "code": "E158"
+        },
+        {
+            "college_name": "Government Engineering College Devagiri",
+            "location": "Haveri",
+            "code": "E160"
+        },
+        {
+            "college_name": "Government Engineering College Huvina Hadagali",
+            "location": "Bellary Dist.",
+            "code": "E161"
+        },
+        {
+            "college_name": "Yenepoya Institute of Technology Thodar",
+            "location": "Moodbidri",
+            "code": "E162"
+        },
+        {
+            "college_name": "K L E Ss K L E College of Engineering and Technology Chikkodi",
+            "location": " Belgaum Dist.",
+            "code": "E163"
+        },
+        {
+            "college_name": "Amrutha Institute of Engineering and Mangement Bidadi Indust. Estate",
+            "location": "Ban'lore",
+            "code": "E164"
+        },
+        {
+            "college_name": "Alva`s Institute of Engineering and Technology",
+            "location": "Moodabidri,",
+            "code": "E165"
+        },
+        {
+            "college_name": "Brindavan College of Engineering Yelahanka",
+            "location": " Bangalore",
+            "code": "E167"
+        },
+        {
+            "college_name": "R.R.Institute of Technology Chikkabanavara",
+            "location": " Bangalore",
+            "code": "E168"
+        },
+        {
+            "college_name": "Sai Vidya Institute of Technology",
+            "location": "Bangalore",
+            "code": "E169"
+        },
+        {
+            "college_name": "Balekundri Institute of Technology",
+            "location": "Belgaum",
+            "code": "E171"
+        },
+        {
+            "college_name": "Navodaya Institute of Technology  Raihcur\rE176 Navodaya Institute of Technology ",
+            "location": "Raihcur",
+            "code": "E172"
+        },
+        {
+            "college_name": "Rajeev Institute of Technology",
+            "location": "Hassan",
+            "code": "E173"
+        },
+        {
+            "college_name": "The National Institute of Engineering(NORTH CAMPUS)",
+            "location": "Mysore",
+            "code": "E175"
+        },
+        {
+            "college_name": "Bearys Institute of Technology",
+            "location": "Mangalore",
+            "code": "E176"
+        },
+        {
+            "college_name": "Sha-Shib College of Engineering",
+            "location": "Chickballapur",
+            "code": "E177"
+        },
+        {
+            "college_name": "Angadi Institute of Technology and Management",
+            "location": "Belgaum",
+            "code": "E178"
+        },
+        {
+            "college_name": "ACS College of Engineering Kengeri Hobli",
+            "location": "Bangalore",
+            "code": "E180"
+        },
+        {
+            "college_name": "Vijaya Vittala Institute of Technology ",
+            "location": "Bangalore",
+            "code": "E183"
+        },
+        {
+            "college_name": "Navkis College of Engineering (Formerly NDRKIT) Kandali",
+            "location": " Hassan",
+            "code": "E185"
+        },
+        {
+            "college_name": "Akshaya Institute of Technology",
+            "location": "Tumkur",
+            "code": "E186"
+        },
+        {
+            "college_name": "Srinivas University Mukka",
+            "location": " Suratkal",
+            "code": "E188"
+        },
+        {
+            "college_name": "Government Engineering College",
+            "location": "KARWAR",
+            "code": "E189"
+        },
+        {
+            "college_name": "Veerappa Nisty Engineering College",
+            "location": "Yadigir",
+            "code": "E191"
+        },
+        {
+            "college_name": "Sharnbasva University College for Women(Formerly Godutai)",
+            "location": "Gulbarga",
+            "code": "E193"
+        },
+        {
+            "college_name": "AGM Rural Engineering College Hubli",
+            "location": " Darward (D)",
+            "code": "E194"
+        },
+        {
+            "college_name": "Gopalan College of Engineering and Management White Field",
+            "location": " Bangalore",
+            "code": "E197"
+        },
+        {
+            "college_name": "Sampoorna Institute of Technology and Research Ramanagara",
+            "location": "(D)",
+            "code": "E198"
+        },
+        {
+            "college_name": "K.S. School of Engineering And Management Mallasandra",
+            "location": " Bangalore",
+            "code": "E199"
+        },
+        {
+            "college_name": "ATME College of Engineering Varun hobli",
+            "location": "Mysore",
+            "code": "E201"
+        },
+        {
+            "college_name": "Shri Madhwa Vadiraja Institute of Technology and Management",
+            "location": "Udupi",
+            "code": "E202"
+        },
+        {
+            "college_name": "VSMs Somashekar R Kothiwale Institute of Technology Nippani",
+            "location": "  Belgaum- Dist",
+            "code": "E203"
+        },
+        {
+            "college_name": "Jyothi Institute of Technology",
+            "location": "Bangalore",
+            "code": "E205"
+        },
+        {
+            "college_name": "G Madegowda Institute of Technology Maddur Taluk",
+            "location": " Mandya DIST",
+            "code": "E206"
+        },
+        {
+            "college_name": "Jain Institute of Technology Cross",
+            "location": "Davanagere",
+            "code": "E207"
+        },
+        {
+            "college_name": "Dayananda Sagar Academy of Technology Kanakapur Main Road",
+            "location": "Bangalore",
+            "code": "E209"
+        },
+        {
+            "college_name": "Lingarajappa Engineering College",
+            "location": "Bidar",
+            "code": "E210"
+        },
+        {
+            "college_name": "Shetty Institute of Technology",
+            "location": "Gulbarga",
+            "code": "E211"
+        },
+        {
+            "college_name": "Mangalore Marine College and Technology  Mangalore\r1G1K1R2AG2AK2AR2BG2BK2BR3AG3AK3AR3BG3BK3BRGMGMKGMRSCGSCKSCRSTGSTKSTR\rCS Computers79893----83297--8532791878----78691----82409----778208199383147133940--151521------\rME Mechanical------------------------------137304----------------\rMR Marine Engineering------------------------------173275----------------\rE220 Alliance University",
+            "location": "Bangalore",
+            "code": "E212"
+        },
+        {
+            "college_name": "Biluru Gurubasava Mahaswamiji Institute of Technology Mudhol",
+            "location": "Bagalkot- Dist",
+            "code": "E213"
+        },
+        {
+            "college_name": "Cambridge Institutute of Technology-North Campus Devanahalli(TQ)",
+            "location": "Bangalore(R)",
+            "code": "E216"
+        },
+        {
+            "college_name": "Reva University",
+            "location": "Bangalore",
+            "code": "E219"
+        },
+        {
+            "college_name": " Ramaiah University of Applied Sciences ",
+            "location": "Bangalore",
+            "code": "E221"
+        },
+        {
+            "college_name": "Presidency University Yelahanka",
+            "location": " Bangalore",
+            "code": "E222"
+        },
+        {
+            "college_name": "East West College of Engineering Yelahanka New Town",
+            "location": " Bangalore",
+            "code": "E232"
+        },
+        {
+            "college_name": "Dayananda Sagar University Hosur Road",
+            "location": "  Bangalore",
+            "code": "E235"
+        },
+        {
+            "college_name": "KLE Technological University(Formerly BVBCET)",
+            "location": "Dharward",
+            "code": "E237"
+        },
+        {
+            "college_name": "Mysore College of Engineering and Management",
+            "location": "Mysore",
+            "code": "E239"
+        },
+        {
+            "college_name": "A J Institute Of Engineering And Technology ",
+            "location": "MANGALORE",
+            "code": "E240"
+        },
+        {
+            "college_name": "Gitam School Of Technology BANGALORE RURAL",
+            "location": "DIST",
+            "code": "E241"
+        },
+        {
+            "college_name": "CMR University CHAGALATTI",
+            "location": " BANGALORE",
+            "code": "E252"
+        },
+        {
+            "college_name": "Maharaja Institute of Technology THANDAVAPURA",
+            "location": " MYSORE",
+            "code": "E254"
+        },
+        {
+            "college_name": "Nitte School of Architecture YELAHANKA",
+            "location": "BANGALORE",
+            "code": "E255"
+        },
+        {
+            "college_name": "School of Planning and Architecture",
+            "location": " Mysore",
+            "code": "E257"
+        },
+        {
+            "college_name": "Jain College of Engineering and Technology",
+            "location": "Hubballi",
+            "code": "E258"
+        },
+        {
+            "college_name": "Jain College of Engineering and Research Udyambhag",
+            "location": " Belgaum",
+            "code": "E260"
+        },
+        {
+            "college_name": "Government Engineering College Talakal",
+            "location": "Koppal",
+            "code": "E263"
+        },
+        {
+            "college_name": "Government Engineering College Viprasainagar",
+            "location": "  Gangavathi",
+            "code": "E265"
+        },
+        {
+            "college_name": "Government Engineering College Moselehosahalli",
+            "location": "Hassan",
+            "code": "E269"
+        },
+        {
+            "college_name": "Visvesvaraya Technological University Muddenahalli",
+            "location": "Chickkaballapur",
+            "code": "E272"
+        },
+        {
+            "college_name": "Visvesvaraya\rTechnological University",
+            "location": "\rBelgaum",
+            "code": "E273"
+        },
+        {
+            "college_name": "Government\rEngineering College\rChallakere",
+            "location": "Chitradurga",
+            "code": "E274"
+        },
+        {
+            "college_name": "University of Mysore",
+            "location": "Mysore",
+            "code": "E278"
+        },
+        {
+            "college_name": ")",
+            "location": "Mysore",
+            "code": "E279"
+        },
+        {
+            "college_name": "R V University",
+            "location": "Bangalore",
+            "code": "E281"
+        },
+        {
+            "college_name": "Vidyashilp University",
+            "location": "Bangalore",
+            "code": "E283"
+        },
+        {
+            "college_name": "Garden City\rUniversity",
+            "location": "Bangalore",
+            "code": "E284"
+        },
+        {
+            "college_name": "Visvesvaraya Technological University - Regional Center",
+            "location": " Mysore",
+            "code": "E285"
+        },
+        {
+            "college_name": "Government Engineering College Naragund",
+            "location": "Gadag",
+            "code": "E287"
+        },
+        {
+            "college_name": "Government Engineering College",
+            "location": " Bidar",
+            "code": "E288"
+        }
+    ]
+}
