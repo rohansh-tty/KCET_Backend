@@ -41,9 +41,6 @@ def get_token(
         raise frappe.ValidationError(_("Invalid User"))
 
     login = LoginManager()
-    # login.check_if_enabled(user)
-    # if not check_password(user, password):
-    #    login.fail("Incorrect password", user=user)
     try:
         if new_user:
             update_password(
@@ -80,20 +77,8 @@ def get_token(
         frappe.logger(__name__).debug(f"user details is {user_details}")
         if user_details is not None:
             pass
-            # frappe.local.response["profile_pic"] = user_details["profile_pic"]
-            # frappe.local.response["user_id"] = user_details["name"]
-            # frappe.local.response["organization"] = user_details["organization"]
-            # org_doc = frappe.get_doc("Organization", user_details["organization"])
-            # try reading it from Billing Doctype
-            # frappe.local.response["pricing_plan"] = (
-            #     org_doc.pricing_plan if org_doc.pricing_plan else None
-            # )
-            # frappe.local.response["organization_type"] = (
-            #     org_doc.organization_type if org_doc.organization_type else ""
-            # )
-
     frappe.local.response["token"] = token["access_token"]
-
+    frappe.local.response["email"] = user
     frappe.local.response.update(token)
 
 
@@ -180,15 +165,12 @@ def get_bearer_token(user, expires_in=3600):
 
 
 @frappe.whitelist(methods=["POST"], allow_guest=True)
-# @rate_limit(
-#     key="email", limit=get_password_reset_limit, seconds=24 * 60 * 60, methods=["POST"]
-# )
+@rate_limit(
+    key="email", limit=get_password_reset_limit, seconds=24 * 60 * 60, methods=["POST"]
+)
 def custom_signup_user(name: str = None, email: str = None, password: str = None):
     try:
         user_exists = frappe.db.exists("User", {"email": email})
-        print("query args >>>", frappe.request.args)
-        print("user exists >>", user_exists)
-        print("name, email, pass", name, email, password)
         if user_exists:
             frappe.throw(f"User with the email {email} already exists, try logging in!")
             return {"type": "failed", "message": f"User with {email} already exists"}
@@ -210,9 +192,6 @@ def custom_signup_user(name: str = None, email: str = None, password: str = None
             {
                 "name": name,
                 "link": verification_link,
-                # "task": self,
-                # "task_link": f"{frontend_baseurl}/project/{construction_project.name}/task-manager-v2/task/{self.name}",
-                # "assigned_to": frappe.utils.comma_and(sent_emails_to_names),
             },
         )
         frappe.sendmail(
@@ -239,7 +218,6 @@ def generate_email_verification_token(name, email, password):
             frappe.logger(__name__).error("Secret Key & Salt not found in Site Config")
             frappe.throw("Secret Key & Salt not found in Site Config")
         serializer = URLSafeTimedSerializer(secret_key)
-        # using email, password & org in signature, to deserialize while creating employee(which happens post email verification)
         # TODO: Password should not have any symbols, only alphanumeric OR Change this logic/delimiter
         signature = name + ":" + email + ":" + password
         return serializer.dumps(signature, salt=salt_value)
@@ -306,27 +284,17 @@ def email_verification_handler(token):
 
         frappe.logger(__name__).debug(f"email:{email}, password:{password}")
         post_email_verification(name, email, password)
-        # Get the employee doc and give him/her a role and enable his/her employee account
-        # user_doc = frappe.get_doc(
-        #     {"doctype": "Employee", "email": user_info["email"]}
-        # )
-        # user_doc.db_set("account_enabled", 1)
-
         return {
             "status": "success"
-        }  # TODO: Have a standard response format for all observance whitelisted methods
+        }
     except Exception as e:
         frappe.logger(__name__).error(f"Email Verification failed because {e}")
         frappe.throw(f"Email Verification failed. {e}")
-    # TODO: Add a check to see if employee with email is present, if yes, ask him to login
-    # else, enable the employee account
 
 
 def post_email_verification(name, email, password):
     user_exists = frappe.db.exists("User", {"user_id": email})
     frappe.logger(__name__).info(f"Employee Exists?:{user_exists}")
-    # TODO: role arg is not used as of now. By default, setting default roles for new employee
-    print("user emaial", name, email)
     try:
         if not user_exists:
             user_doc = frappe.new_doc("User")
@@ -347,23 +315,6 @@ def post_email_verification(name, email, password):
         else:
             frappe.throw(f"User with the email {email} already exists, try logging in!")
 
-        # notify sales team on new signup
-        # email_template = frappe.render_template(
-        #         "observance_app/templates/emails/new_signup.html",
-        #         {
-        #             "name": name,
-        #             "email": email,
-        #         },
-        #     )
-        # frappe.sendmail(
-        #     recipients=["sales@the-inkers.com"],
-        #     sender="support@the-inkers.com",
-        #     reference_doctype="Employee",
-        #     reference_name=name,
-        #     subject=f"New User Sign-Up - ${name}",
-        #     message=email_template,
-        #     now=True
-        # )
         # create a new frappe bearer token on signup and return the same
         get_token(email, password, new_user=True)
 
